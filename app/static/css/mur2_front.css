@@ -1,0 +1,960 @@
+
+/**********************************
+ * Aboves are same as in editor css
+ * Below is different
+ */
+
+#side_menu {
+    display: flex;
+    width: 25rem;
+}
+
+.topmenu {
+    height: 2.8rem;
+    background-color: var(--fcolor);
+    border-bottom: 1px solid var(--bcolor);
+}
+
+#mur2menutop .toolbar {
+    opacity: 0;
+}
+
+#mainbar {
+    width: 1rem;
+}
+
+#maintext {
+    flex-direction: column;
+    padding-left: 0;
+    width: calc(100% - 27.5275rem );    
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainright {
+    width: max-content;
+    /*  47.74rem is the width of the h1#article_title in preview.css */
+    max-width: calc( 47.74rem + var(--verticaldistance) );
+    min-width: calc( 47.74rem + var(--verticaldistance) );
+}
+
+.main\.proofs #maintext,
+.main\.oa_browser #maintext,
+.main\.discovery #maintext {
+    /* flex-direction: column;
+    padding-left: var(--verticaldistance);    
+    direction: ltr;
+    top: 0;
+    */
+    top: 0;
+    z-index: 30;
+    padding-right: 1.685rem;
+    text-align: right;
+    justify-content: unset;
+    height: 100%;
+}
+
+.main\.proofs #mainleft,
+.main\.oa_browser #mainleft,
+.main\.discovery #mainleft {
+    display: none;    
+}
+
+.main\.proofs #mainright,
+.main\.oa_browser #mainright,
+.main\.discovery #mainright {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.main\.proofs #article_main,
+.main\.oa_browser #article_main,
+.main\.discovery #article_main {
+    height: 100%;    
+}
+
+#maintext .control-item {
+    color: var(--bcolor);
+}
+#maintext .control-item:hover {
+    /* */
+    border-bottom: solid var(--bcolor) 1px;
+}
+.main\.searchstart #maintext .control-item:hover {
+    /* */
+    border-bottom: none;
+}
+
+/* user profile */
+#user_profil_overview {
+    display: flex;
+    flex-direction: row;
+}
+#user_profil_overview h1{
+    top: -1.2rem;
+}
+#avator {
+    height: 10rem;
+    width: 10rem;
+}
+
+td a.control-item {
+    height: unset;
+    fill: var(--bcolor);
+}
+
+
+#user_articles {
+    display: flex;
+    justify-content: space-between;    
+    display: -webkit-flex ; /* for 9 > Safari */
+    -webkit-justify-content: space-between;   
+    justify-content: -webkit-space-between;/* for Safari */
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+
+
+#side_menu{  
+    color: var(--fontcolor);
+    background-color: var(--fcolor);
+}
+
+#side_menu .control-item {
+    color: var(--fontcolor);
+}
+
+#side_menu .control-item:hover {
+    border-bottom: solid var(--fontcolor) 1px;
+}
+
+#side_menu #mur2menutop {
+    border-bottom: solid 1px var(--fontcolor);
+}
+
+#side_menu #side_top {
+    border-left: 1px solid var(--fontcolor);
+}
+
+.topmenu {
+    border: none;
+}
+
+
+
+#article_main {
+    direction: ltr;
+}
+
+/* 
+ ****************************************
+ * frontpage 
+ */
+.main\.root .info {
+    position: absolute;    
+    border-radius: 10rem;
+    background-color: red;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    z-index: 3;
+}
+
+.main\.root #details {
+    left: 50%;
+    top: 5rem;
+}
+
+.main\.root #demo {
+    left: 35%;
+    top: calc(50% - 10rem);
+}
+
+.main\.root #details a,
+.main\.root #demo a{
+    position: relative;
+    top: 36%;
+    text-decoration: none;
+    color: var(--fcolor);
+    letter-spacing: 0.7px;
+}
+
+.main\.root #pages {
+    height: 100%;
+    
+}
+
+#frontendimage {
+    opacity: 0;
+}
+
+.main\.root #side_menu {
+    display: none;
+    min-width: calc(50% - 5rem) ; 
+    border-left: 1px solid var(--fontcolor);
+    z-index: 2;
+    flex-direction: column;
+}
+
+.pagenumber {
+    font-family: liberation-serif, serif;
+    font-size: 4em ; 
+    /* text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red; */
+    color: red;
+    font-weight: bold;
+    top: calc(80% + 1.2rem);
+    left: calc(3% + 4.2rem);
+}
+
+.main\.root #side_menu  #side_top {    
+    border-left: 0;
+    max-width: 45rem;
+    padding-left: calc( var(--verticaldistance) * 2 + 2.5rem);
+}
+
+
+.frontpages {
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+    height: calc(100% - 2.8rem - 2.6rem - 0.8425rem );
+}
+
+.frontpages.hide {
+    display: none
+}
+
+.main\.root  .menupage {
+    width: 100%;
+    height: calc(100% - 2.8rem - 2.6rem - 0.8425rem );
+    text-align: left;
+    text-transform: initial;    
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    letter-spacing: 0;
+    overflow: visible;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.showdetails {
+    -webkit-animation-name: animatetop;    
+    animation-name: animatetop;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {opacity:0} 
+  to {opacity:1}
+}
+
+@keyframes animatetop {
+  from {opacity:0}
+  to {opacity:1}
+}
+
+.hidedetails {
+    -webkit-animation-name: animateout;    
+    animation-name: animateout;
+    display: none;
+}
+/* Add Animation */
+@-webkit-keyframes animateout {
+  from {opacity:1} 
+  to {opacity:0}
+}
+
+@keyframes animateout {
+  from {opacity:1}
+  to {opacity:0}
+}
+
+/* v3 */
+
+.main\.root #maintext {
+    top: 0rem;
+    width: 100%;
+    direction: ltr;
+    height: 100%;
+    padding: 0;
+}
+.main\.root #maintext #pages #page1 {
+    /* a full cover of background image */
+    /* background-image: url("../images/mur2_revis_4.jpg"); */
+    /* background-image: url("https://sajozsattilahome.files.wordpress.com/2020/11/mur2_revis_4.jpg"); */
+    background-image: url("https://sajozsattilahome.files.wordpress.com/2021/04/research_in.png"); */
+    background-repeat: no-repeat;
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.main\.root #maintext #pages #page3 {
+    /* a full cover of background image */
+    /* background-image: url("../images/mur2_revis_4.jpg"); */
+    background-image: url("https://sajozsattilahome.files.wordpress.com/2020/12/dscf3865.jpg");
+    background-repeat: no-repeat;
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.main\.root #maintext #pages #page2 {
+    /* a full cover of background image */
+    /* background-image: url("../images/mur2_revis_4.jpg"); */
+    background-image: url("https://sajozsattilahome.files.wordpress.com/2020/11/imperial-good-companion_3_2.jpg");
+    background-repeat: no-repeat;
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.main\.root .lapozo {
+    width: 5rem;
+    height: 5rem;  
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+}
+
+.main\.root .leftallow {
+   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1Mi4zIDUyLjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUyLjMgNTIuMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOnJlZDt9Cjwvc3R5bGU+Cjx0aXRsZT5uZXh0XzE8L3RpdGxlPgo8ZyBpZD0iRWJlbmVfMiI+Cgk8ZyBpZD0iRWJlbmVfMS0yIj4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTkuNywyNi4yaDEzLjYgTTUxLjYsMjYuMkwyNi4yLDUxLjZMMC43LDI2LjJMMjYuMiwwLjdMNTEuNiwyNi4yeiBNMjkuMywyMi40bDQsMy43bC00LDMuN2w0LTMuN0wyOS4zLDIyLjQKCQkJeiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPg==);
+    top: calc(80% - 2.2rem) ;
+    left: calc(3% + 1.05rem);
+}
+
+.main\.root .rightallow {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1Mi4zIDUyLjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUyLjMgNTIuMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOnJlZDt9Cjwvc3R5bGU+Cjx0aXRsZT5wcmV2PC90aXRsZT4KPGcgaWQ9IkViZW5lXzIiPgoJPGcgaWQ9IkViZW5lXzEtMiI+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTMyLjYsMjYuMkgxOSBNMC43LDI2LjJMMjYuMiwwLjdsMjUuNSwyNS40TDI2LjIsNTEuNkwwLjcsMjYuMnogTTIzLDI5LjlsLTQtMy43bDQtMy43bC00LDMuN0wyMywyOS45eiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPg==);
+    top: calc(80% + 2.2rem) ;
+    left: calc(3% - 1.05rem);
+}
+
+.main\.root .leftallow:hover,
+.main\.root .rightallow:hover {
+    cursor: pointer;
+}
+
+/*
+ ****************************************
+ * special setting for oa 
+ */
+
+.main\.reader .articleinfo,
+.main\.oareader .articleinfo {
+    width: calc( var(--verticaldistance) * 4 );
+    flex-shrink: 0;
+}
+
+.main\.reader .articleinforow,
+.main\.oareader .articleinforow {
+    display: flex;
+    flex-direction: row;
+}
+
+.main\.oareader .similar {
+    padding-bottom: 0.8425rem;
+}
+
+.main\.oareader #similarwrapper{
+    position: relative;
+}
+
+.main\.oareader #signup {
+    position: absolute;
+    top: 2.5275rem;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-height: calc(100% - 2.5275rem);
+    min-width: 100%;
+}
+
+/*
+ ****************************************
+ * special setting for login 
+ */
+
+.main\.edit_journal #maintext ,
+.main\.edit_profile #maintext ,
+.main\.searchstart  #maintext ,
+.auth\.login #maintext,
+.auth\.register #maintext, 
+.auth\.reset_password_request #maintext {
+    border-right: 1px solid var(--fontcolor);
+    z-index: 30;
+    padding-right: 1.685rem;
+    text-align: right;
+    justify-content: unset;
+}
+
+.auth\.register #maintext  h1, 
+.auth\.reset_password_request #maintext  h1, 
+.auth\.login #maintext h1 {
+    border-top: solid 1px var(--fontcolor);
+    padding-right: 3.37rem;
+    padding-top: 1.685rem;
+    margin-top: 1.5rem;
+    min-width: 100%;
+    left: 0;
+}
+
+.auth\.register #foot, 
+.auth\.reset_password_request #foot,
+.auth\.login #foot {
+    border-left: 1px solid var(--fontcolor);
+    padding-left: 1.685rem;
+}
+
+.auth\.register #mur2menu_link, 
+.auth\.reset_password_request #mur2menu_link,
+.auth\.login #mur2menu_link {
+    padding-left: 1.685rem;
+}
+
+.auth\.register #side_menu #mur2menutop, 
+.auth\.reset_password_request #side_menu #mur2menutop,
+.auth\.login #side_menu #mur2menutop {
+    border-bottom: solid 1px var(--fontcolor);
+}
+
+
+/*
+ ****************************************
+ * special setting for user 
+ */
+
+
+.main\.journal  #user_username,
+.main\.user  #user_username {
+    writing-mode:  tb;
+    width: 25rem;
+    overflow: hidden;
+    /* mur2menutop - foot - side_menu */
+    height: calc(100% - 2.8rem - 2.6rem - 0.8425rem );
+    display: inline-block;
+    line-height: 1;
+    font-weight: bold;
+    color: var(--fontcolor);
+    position: fixed;
+    left: 0.845rem;
+    top: calc( 2.8rem + 0.8425rem );
+    text-align: center;
+    transform: rotate(180deg);    
+}
+
+
+.main\.keywords #maintext,
+.main\.search #maintext,
+.main\.user #maintext,
+.main\.journal #maintext {
+    /* width: calc(100% - 27.5275rem - 34.315rem ); */
+    top: 1rem;    
+}
+
+
+
+.main\.journal #maintext,
+.main\.user #maintext {
+    padding-top: 2.4825rem ;
+}
+
+.main\.journal .usertitle,
+.main\.keywords .usertitle,
+.main\.search .usertitle ,
+.main\.root .usertitle ,
+.main\.review .usertitle ,
+.main\.user .usertitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+    border-left: 1px solid var(--fontcolor);
+
+    position: relative;
+    top: -1.685rem;
+    padding-top: 2.5275rem;
+    padding-bottom: 0.845rem;
+}
+
+.main\.review .usertitle a,
+.main\.journal .usertitle a,
+.main\.keywords .usertitle a,
+.main\.root .usertitle a,
+.main\.user .usertitle a {
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+.main\.review .usertitle,
+.main\.review .userabstract,
+.main\.journal .usertitle,
+.main\.journal .userabstract,
+.main\.keywords .usertitle,
+.main\.keywords .userabstract,
+.main\.root .usertitle,
+.main\.root .userabstract,
+.main\.user .usertitle,
+.main\.user .userabstract {
+    margin-left: 0.845rem;
+    padding-left: 0.845rem;
+    
+}
+
+.main\.review  .userabstract ,
+.main\.journal .userabstract,
+.main\.keywords  .userabstract ,
+.main\.root .userabstract,
+.main\.user .userabstract {
+    display: flex;
+    flex-direction: row;
+} 
+
+.main\.review   .user_articles, 
+.main\.journal   .user_articles,
+.main\.keywords   .user_articles, 
+.main\.root   .user_articles, 
+.main\.user .user_articles {
+    padding-bottom: 3.37rem;
+    border-top: 1px solid var(--fontcolor);
+    direction: ltr;
+}
+
+.main\.review  .userabstracttext p,
+.main\.review  .usertitle p,
+.main\.journal  .userabstracttext p,
+.main\.journal  .usertitle p,
+.main\.keywords  .userabstracttext p,
+.main\.keywords  .usertitle p,
+.main\.root  .userabstracttext p,
+.main\.root  .usertitle p,
+.main\.user .userabstracttext p ,
+.main\.user .usertitle p {
+    margin: unset;
+    max-width: calc( 41rem + 5 * 1.685rem);;
+}
+
+.main\.review  .article_action,
+.main\.journal  .article_action,
+.main\.keywords  .article_action,
+.main\.root  .article_action,
+.main\.user .article_action{
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 3.37rem;
+}
+
+/*
+ ****************************************
+ * special setting for user 
+ */
+.main\.edit_journal #maintext h1,
+.main\.edit_profile #maintext h1 {
+    border-top: solid 1px var(--fontcolor);
+    padding-right: 1.685rem;
+    padding-top: 1.685rem;
+    margin-top: 1.5rem;
+    min-width: 100%;
+    left: 0;
+}
+
+/*
+ ****************************************
+ * special setting for search 
+ */
+.main\.review #maintext h1,
+.main\.keywords #maintext h1 {
+    direction: ltr;
+    margin: unset;
+    left: 1.685rem;
+    max-width: unset;
+    border-top: 1px solid var(--fontcolor);
+    padding-left: 2.5275rem;
+    padding-top: 0.8465rem;
+    width: calc(100% + 1.685rem);
+}
+
+.main\.review #maintext,
+.main\.keywords #maintext {
+    padding-top: calc(2.4215rem + 1px);
+}
+
+#maintitle {
+    max-width: unset;
+    margin-left: calc( 1.685rem + 1px);
+    border-left: 1px solid var(--fontcolor);
+    padding-left: 0.8425rem;
+    margin-bottom: 1.685rem;
+    position: relative;
+    left: -0.86425rem;
+    text-align: left;
+    top: -2.8rem;
+    padding-top: 2.8rem;
+}
+
+#maintitle div {
+    padding-left: 3.5rem;
+    color: var(--fontcolor);
+}
+
+#lapozo {
+    border-top: 1px solid var(--fontcolor);
+    flex-direction: row;
+    justify-content: space-between;    
+    display: -webkit-flex ; /* for 9 > Safari */
+    -webkit-justify-content: space-between;   
+    justify-content: -webkit-space-between;/* for Safari */
+    padding-top: 0.8425rem;
+        
+}
+
+.categoryid ,
+.keywordsid, 
+.journalid {
+    font-style: italic;
+    padding-top: 0.8425rem;
+    max-width: 41rem;
+}
+
+.categoryid + .keywordsid ,
+.journalid + .categoryid , 
+.journalid + .categoryid + .keywordsid {
+    padding-top: unset;    
+}
+
+/*
+ * Discovery
+*/
+.discovery_legend_color {
+    width: 1.4rem;
+    height: 1.4rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    border-radius: 0.7rem;
+    margin-right: 0.8425rem;
+}
+
+.discovery_legend {
+    display: flex;
+    flex-direction: row;
+    text-transform: initial;
+    padding-left: 1.685rem;    
+}
+
+/****************************************
+ * iframe settings
+ */
+
+.main\.readmain {
+    margin: 0;    
+}
+
+.main\.readmain :is(h1, h2, h3, h4, h5, h6) {
+    left: 0;
+    margin: 0;
+}
+
+/****************************************
+ * Third party plugins settings
+ */
+
+
+#thirdparty {
+    display: flex;
+    flex-direction: column;    
+}
+
+/****************************************
+ * Media settings
+ */
+
+/* phones */
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 767px){ 
+    #foot {
+        display: none;
+    }
+    /* it is touchscrren can not hover */
+    .main\.review  .article_action,
+    .main\.journal  .article_action,
+    .main\.keywords  .article_action,
+    .main\.root  .article_action,
+    .main\.user .article_action {
+        opacity: 1;
+    }
+    
+    #maintext,
+    .main\.searchstart #maintext,
+    .main\.keywords #maintext,    
+    .main\.user #maintext,
+    .main\.journal #maintext,
+    .main\.edit_profile #maintext, 
+    .main\.edit_journal #maintext {
+        padding-left: 1.685rem;
+        width: calc(100% - var(--verticaldistance) - var(--verticaldistance));
+        z-index: 2;
+        position: relative;
+        top: 3rem;
+    }
+    
+    .main\.reader .articleinfo, 
+    .main\.oareader .articleinfo {
+        width: calc( var(--verticaldistance) * 6 );
+    }
+    .main\.proofs #maintext,
+    .main\.oa_browser #maintext,
+    .main\.discovery #maintext {
+        flex-direction: column;
+        padding-left: 1.685rem;
+        width: calc(100% - var(--verticaldistance)  );
+        direction: ltr;
+        top: 3rem;
+        z-index: 2;
+        position: relative;
+    }
+    
+    .main\.root #maintext {
+        position: fixed;
+        z-index: 0;
+    }
+    .main\.root #side_menu  #side_top {    
+        padding-left: calc( var(--verticaldistance) * 2 );
+    }
+    .main\.root #details {
+        left: calc(3% + 5rem);
+        top: 5rem;
+    }
+    .main\.root #side_menu {        
+        min-width: calc(97% - 10rem);
+        background-color: var(--fcolor);
+    }
+    
+    #side_menu {
+        width: calc(100% - var(--verticaldistance));
+        min-width: calc(100% - var(--verticaldistance));  
+        z-index: 1;
+        font-size: 2rem;
+    }
+    #side_menu #side_top {
+        border-left: unset;
+    }
+    #side_menu #mur2menutop {
+        border-bottom: unset;
+    }
+    
+    #mur2menutop .toolbar {
+        opacity: 1;        
+    }
+    
+    #discovery_legends,
+    .sidebarLinks, 
+    #mur2menu_link {
+        color: rgba(0,0,0,0) ;        
+    }
+    
+    #nodesearch {
+        border: none;
+    }
+    
+    .discovery_legend_color {
+        background: unset !important  ;
+    }
+    
+    #id_side_menu:checked ~ #side_menu {
+        z-index: 3;
+    }
+    
+    .auth\.reset_password_request #side_menu,
+    .auth\.register #side_menu,
+    .auth\.login #side_menu {
+        display: none;
+    }
+    
+    .auth\.reset_password_request #maintext,
+    .auth\.register #maintext,
+    .auth\.login #maintext {
+        padding-right: 5.055rem;
+    }
+    
+    .main\.root  #user_username,
+    .main\.journal #user_username,
+    .main\.user  #user_username {
+        writing-mode: lr;
+        transform: unset;
+        position: relative;
+        height: 6.74rem;
+        left: 0.8425rem;
+        text-align: left;
+        width: 100%;
+        top: -1.685rem;
+        width: 100%;
+    }
+}
+
+/* 5/4 desktop */
+@media screen and (min-device-width : 1025px) and (max-device-width : 1440px) and (min-aspect-ratio: 5/4) { 
+    #maintext,
+    .main\.keywords #maintext,
+    .main\.user #maintext,
+    .main\.journal #maintext {
+        padding-left: 15.25rem;
+        width: calc(100% - 17.5275rem - 15.25rem);
+    }
+    
+    .main\.journal  #user_username,
+    .main\.user  #user_username {
+        width: 12.5rem;
+    }
+    .main\.proofs #maintext,
+    .main\.oa_browser #maintext,
+    .main\.discovery #maintext {
+        flex-direction: column;
+        padding-left: var(--verticaldistance);
+        width: calc(100% - 17.5275rem );
+        direction: ltr;
+        top: 0;
+    }
+    #side_menu {
+        width: 15rem;
+        min-width: 15rem;
+    }    
+}
+
+
+/* iPad in landscape */
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    #maintext,
+    .main\.keywords #maintext,
+    .main\.journal #maintext,
+    .main\.user #maintext {
+        padding-left: calc( 2 * var(--verticaldistance));
+        width: calc(100% - 17.5275rem - 2 * var(--verticaldistance));
+    }
+    
+    .main\.proofs #maintext,
+    .main\.oa_browser #maintext,
+    .main\.discovery #maintext {
+        flex-direction: column;
+        padding-left:  var(--verticaldistance);
+        width: calc(100% - 17.5275rem );
+        direction: ltr;
+        top: 0;
+    }
+    
+    .main\.root #side_menu  #side_top {    
+        padding-left: calc( var(--verticaldistance) * 2 );
+    }
+    .main\.root #details {
+        left: calc(3% + 5rem);
+        top: 5rem;
+    }
+    .main\.root #side_menu {        
+        min-width: calc(97% - 10rem);
+    }
+    
+    #side_menu {
+        width: 15rem;
+        min-width: 15rem;
+    }  
+    .main\.root  #user_username,
+    .main\.journal   #user_username,
+    .main\.user  #user_username {
+        writing-mode: lr;
+        transform: unset;
+        position: relative;
+        height: 6.74rem;
+        left: calc(var(--verticaldistance) / 2);
+        text-align: left;
+        width: 100%;
+        top: calc( -1 * var(--verticaldistance));
+        width: 100%;
+    }   
+    /* it is touchscrren can not hover */
+    .main\.review  .article_action,
+    .main\.journal  .article_action,
+    .main\.keywords  .article_action,
+    .main\.root  .article_action,
+    .main\.user .article_action {
+        opacity: 1;
+    }
+}
+
+/* iPad  in portrait */
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    #maintext,
+    .main\.keywords #maintext,
+    .main\.journal #maintext,
+    .main\.user #maintext {
+        padding-left: calc( 2 * var(--verticaldistance));
+        width: calc(100% - 17.5275rem - var(--verticaldistance));
+    }
+    
+    .main\.proofs #maintext,
+    .main\.oa_browser #maintext,
+    .main\.discovery #maintext {
+        flex-direction: column;
+        padding-left:  var(--verticaldistance);
+        width: calc(100% - 17.5275rem );
+        direction: ltr;
+        top: 0;
+    }
+    
+    .main\.root #side_menu  #side_top {    
+        padding-left: calc( var(--verticaldistance) * 2 );
+    }
+    .main\.root #details {
+        left: calc(3% + 5rem);
+        top: 5rem;
+    }
+    .main\.root #side_menu {        
+        min-width: calc(97% - 10rem);
+    }
+    
+    #side_menu {
+        width: 15rem;
+        min-width: 15rem;
+    }
+    .main\.root  #user_username,
+    .main\.journal #user_username,
+    .main\.user  #user_username {
+        writing-mode: lr;
+        transform: unset;
+        position: relative;
+        height: calc( 4 * var(--verticaldistance));
+        left: calc(var(--verticaldistance) / 2);
+        text-align: left;
+        width: 100%;
+        top: calc( -1 * var(--verticaldistance));
+        width: 100%;
+    }
+    
+    /* it is touchscrren can not hover */
+    .main\.review  .article_action,
+    .main\.journal  .article_action,
+    .main\.keywords  .article_action,
+    .main\.root  .article_action,
+    .main\.user .article_action {
+        opacity: 1;
+    } 
+}
+

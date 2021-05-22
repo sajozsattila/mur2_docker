@@ -1,0 +1,21 @@
+            <!-- right side of the mur2 menu -->
+            <div id="mur2menu" class="toolbar-button">
+
+                <div id="mur2menutop">
+                    <label class="toolbar fas fa-bars" for="id_side_menu" title="{{ _('Close Side Menu') }}" ></label>
+                </div>
+
+                <!-- <input class="control-input" id="id_search" type="checkbox" name="source_type" > -->
+                <div id="mur2menu_link" class="sidebarLinks">
+                    <a class="toolbar-button control-item  " title="{{ _('Home') }}" href="{{ url_for('main.root') }}">{{ _("Home") }}</a>
+                    {% if not current_user.is_anonymous %}
+                    <a class="toolbar-button control-item" title="{{ _('Editor') }}" href="{{ url_for('editor.editor', articleid='-1') }}">{{ _("Editor") }}</a>
+                    <a class="toolbar-button control-item " title="{{ _('Media') }}" href="{{ url_for('editor.media') }}">{{ _("Media") }}</a>
+                    {% else %}
+                    <a class="toolbar-button control-item" title="{{ _('Editor') }}" href="{{ url_for('editor.free_editor') }}">{{ _("Editor") }}</a>
+                    {% endif %}
+                    <input class="choice_toolbar control-input" id="id_dark_menu" type="checkbox" onclick="switchtheme();" name="source_type" >
+                    <label class="toolbar-button control-item" for="id_dark_menu" title="{{ _('Switch theme') }}" >{{ _('Switch theme') }}</label>
+                </div>
+            </div>
+

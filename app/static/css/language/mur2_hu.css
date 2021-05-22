@@ -1,0 +1,85 @@
+body, button input, select {
+  /* */
+    font-family: liberation-serif, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5; 
+    letter-spacing: 0;
+    font-feature-settings: "liga" 1; 
+    font-kerning: normal;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+button.collapsible {
+    font-family: 'Ibarra Real Nova', serif; 
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-kerning: normal;
+}
+
+.normalfont {
+    font-family: liberation-serif, sans-serif;
+}
+
+
+/* phones */
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 767px){ 
+    body h1,
+    body h2,
+    body h3,
+    body h4,
+    body h5 {
+        left: 0rem;
+        max-width: 41rem;
+    }
+    body, button input, select {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-device-width : 1025px) and (max-device-width : 1440px) and (min-aspect-ratio: 5/4) { 
+    body h1,
+    body h2,
+    body h3,
+    body h4,
+    body h5 {
+        left: -1.685rem;
+        max-width: 42.685rem;
+    } 
+}
+
+/* iPad in landscape */
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    body h1,
+    body h2,
+    body h3,
+    body h4,
+    body h5 {
+        left: 0rem;
+        max-width: 41rem;
+    }
+}
+
+/* iPad  in portrait */
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    body h1,
+    body h2,
+    body h3,
+    body h4,
+    body h5 {
+        left: 0rem;
+        max-width: 41rem;
+    }
+}

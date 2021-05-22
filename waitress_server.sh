@@ -1,0 +1,1 @@
+waitress-serve  --url-scheme=http --port=8000 --call app:create_app
