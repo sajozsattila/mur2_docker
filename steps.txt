@@ -1,8 +1,0 @@
-git clone https://github.com/sajozsattila/Flask_skeleton.git
-rm -rf Flask_skeleton/.git
-mv Flask_skeleton/* ./
-rmdir Flask_skeleton/
-git clone -b v1.7.2 https://github.com/sajozsattila/mur2_editor.git
-rm -rf mur2_editor/.git
-mv mur2_editor/ ./app/
-rm -rf mur2_editor
