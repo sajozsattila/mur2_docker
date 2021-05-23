@@ -24,7 +24,6 @@ Flask-SQLAlchemy==2.5.1
 # Flask-Uploads==0.2.1
 Flask-Reuploaded==1.1.0
 Flask-WTF==0.14.3
-gensim==3.8.3
 idna==2.10
 itsdangerous==1.1.0
 Jinja2==2.11.3

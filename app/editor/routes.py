@@ -470,6 +470,7 @@ def processmarkdown():
     md = request.form.get('md')
     # bibtex
     bib = request.form.get('bib')
+
     # bibstyle
     bibsyle = request.form.get('bibsyle')
     # language
@@ -493,6 +494,7 @@ def processmarkdown():
         bibname = os.path.join(dirname, 'raw.bib')
         with open(bibname, 'w') as f:
             f.write(bib)
+    current_app.logger.info(bibname)
 
     # send to nodejs server
     x = requests.get("http://127.0.0.1:3000/", params={'filename': mdname, 'bibtex': bibname,
