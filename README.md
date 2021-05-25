@@ -10,6 +10,6 @@ Docker image for local installed [μr² editor](https://github.com/sajozsattila/
 1. Run the mur2_docker images
    ``` docker run --name mur2_docker  -p 8000:8000 mur2_docker:1.7.2 ```
    
-The editor should be available on the http://localhost:8000 port.
+The editor should be available on the http://localhost:8000/editor address.
 
 Currently the image run the editor version 1.7.2 which is *not* the stable branch. 
