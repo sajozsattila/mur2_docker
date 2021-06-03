@@ -21,12 +21,14 @@ RUN pip install -r requirements.txt
 # install jwt for confluence this is conflict with the PyJWT so we do from git
 WORKDIR /tmp
 RUN git clone https://github.com/sajozsattila/python-jwt && cd python-jwt && pip install .
+RUN git clone -b v1.7.2 https://github.com/sajozsattila/mur2_editor.git
 WORKDIR /home/mur2
 
 # install the application
 COPY app ./app
 COPY npm ./npm
-RUN mkdir user_data
+# copy over the editor code
+RUN mkdir user_data && cp -r /tmp/mur2_editor/* ./
 COPY app.db ./
 COPY waitress_server.sh boot.sh ./
 RUN chmod +x waitress_server.sh
