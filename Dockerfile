@@ -1,4 +1,4 @@
-FROM mur2/pandoc:1.0.12
+FROM mur2/pandoc:1.0.13
 
 ARG DEBIAN_FRONTEND=noninteractive
 
